@@ -18,6 +18,7 @@ open class IPFS @JvmOverloads constructor(protected val base_url: String = "http
     val pins by lazy { Pins(connection) }
     val repo by lazy { Repo(connection) }
     val name by lazy { Name(connection) }
+    val pubsub by lazy { PubSub(connection) }
 
     val lastError: MessageWithCode? get() = connection.lastError
 }
